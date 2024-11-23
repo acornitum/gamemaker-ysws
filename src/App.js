@@ -8,7 +8,7 @@ export default function App() {
       <a href="https://hackclub.com"><img src="https://assets.hackclub.com/flag-orpheus-top.svg" className="absolute"/></a>
 
       <div className="flex flex-col justify-center items-center h-screen text-center mx-5">
-        <p className="text-6xl mb-2">Gamemaker Tutorial</p>
+        <p className="text-6xl mb-2 font-bold">Gamemaker Tutorial</p>
         <p className="text-2xl">the basics of how to use Gamemaker: an engine for making 2d games</p>
 
         <div className="mt-16 bg-blue-200 rounded-lg p-8 m-5">
@@ -96,12 +96,52 @@ export default function App() {
           <img src="pic18.png"/>
         </div>
 
-        <div className="opacity-20">
-          <p className="text-3xl">adding player movement - work on progress (will finish in next 24 hours; it's just 3am rn and id like to sleep)</p>
-          <p>There's a few ways to make an object move in Gamemaker. This is the way I like doing it.</p>
-          <p>Click into the object; two tabs should appear: one for object specifications, and the other for events.</p>
+        <div className="">
+          <p className="text-3xl">adding player movement</p>
+          <p>There's a few ways to make an object move in Gamemaker. I'll be going over how I like doing it.</p>
+          <p>Go back to <i>Workspace 1</i> and go back in front of the object panels.</p>
+          <img src="/pic19.png"/>
           <p><i>Events</i> are the things that happen after a preset condition is triggered. When you click on <i>Add Event</i>, you get to choose from a list of “triggers”; for example, <i>Create</i> (code runs once when object first appears in game), <i>Step</i> (code runs at the fps the game is set to at all times), <i>Collision</i> (code runs when object touches another specified object).</p>
-          <p>The first thing we’re going to do is make a <i>Create</i> event.</p>
+          <p>The first thing we’re going to do is make a <i>Create</i> event. If this is your first time using Gamemaker, it'll ask you whether you want to use code or their visual language; choose code.</p>
+          <img src="/pic20.png"/>
+          <p>A window that looks like this will pop up!</p>
+          <img src="/pic21.png"/>
+          <p>Finally, we can start coding.</p>
+          <p>We need to define a few things in <i>Create</i>. <i>image_speed</i> is how fast the player <i>starts</i> moving. <i>vSpeed</i> and <i>hSpeed</i> stand for the vertical and horizontal speed. <i>speedWalk</i> is the max walking speed.</p>
+          <div className="bg-slate-700 rounded-lg p-8 text-white">
+            <p className="p-0">image_speed = 0;</p>
+            <p className="p-0">vSpeed = 0;</p>
+            <p className="p-0">hSpeed = 0;</p>
+            <p className="p-0">speedWalk = 4.0;</p>
+          </div>
+          <img src="/pic22.png"/>
+          <p>Our player still won't quite move yet; we'll need to check if a key is pressed and move accordingly.</p>
+          <p>In order to do that, we need to create a <i>Step</i> event.</p>
+          <img src="/pic23.png"/>
+          <p>This is where the majority of the code for player movement will lie!</p>
+          <p>First, we need to check when certain keys are pressed. For this tutorial, I'll be using the WASD for player movement.</p>
+          <div className="bg-slate-700 rounded-lg p-8 text-white mb-4">
+            <p className="p-0">keyLeft = keyboard_check(ord("A"));</p>
+            <p className="p-0">keyRight = keyboard_check(ord("D"));</p>
+            <p className="p-0">keyUp = keyboard_check(ord("W"));</p>
+            <p className="p-0">keyDown = keyboard_check(ord("S"));</p>
+          </div>
+          <p><i>keyboard_check</i> checks if a key is pressed! We repeat it four times for each of the four keys.</p>
+          <img src="/pic24.png"/>
+          <p>After that, we need the player to use the key inputs to determine what direction the player should be moving in. Additionally, we need to make sure the player is moving at the same speed, no matter if they're going diagonally or in one direction. We'll track the horizontal and vertical speeds of the player separately.</p>
+          <div className="bg-slate-700 rounded-lg p-8 text-white mb-4">
+            <p className="p-0">inputDirection = point_direction(0,0,keyRight-keyLeft,keyDown-keyUp); </p>
+            <p className="p-0">inputMagnitude = (keyRight - keyLeft != 0) || (keyDown - keyUp != 0); </p>
+            <p className="p-0">hSpeed = lengthdir_x(inputMagnitude * speedWalk, inputDirection); </p>
+            <p className="p-0">vSpeed = lengthdir_y(inputMagnitude * speedWalk, inputDirection); </p>
+          </div>
+          <p>And finally, time to make the player move!</p>
+          <div className="bg-slate-700 rounded-lg p-8 text-white mb-4">
+            <p className="p-0">x += hSpeed;</p>
+            <p className="p-0">y += vSpeed;</p>
+          </div>
+          <p>The <i>Step</i> tab should look like this when done:</p>
+          <img src="/pic25.png"/>
         </div>
 
         <div>
