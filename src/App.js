@@ -142,11 +142,14 @@ export default function App() {
           </div>
           <p>The <i>Step</i> tab should look like this when done:</p>
           <img src="/pic25.png"/>
+          <p>When you run your game, you should be able to move your player using WASD keys!</p>
+          <img src="/pic26.png" />
+          <p>That's the end of this tutorial!!</p>
         </div>
 
         <div>
           <p className="text-3xl">have fun!</p>
-          <p>And that’s the end of the tutorial!! Of course, there’s a ton I haven’t covered, but there’s also a lot of preexisting online resources that cover them. Hopefully you’ve gotten a little more familiar with Gamemaker. Good luck on making your game!!</p>
+          <p>Of course, there’s a ton I haven’t covered, but there’s also a lot of preexisting online resources that do cover them. Hopefully you’ve gotten a little more familiar with Gamemaker. Good luck on making your game!!</p>
         </div>
         
       </div>
