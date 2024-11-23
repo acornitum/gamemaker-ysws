@@ -13,7 +13,7 @@ export default function App() {
 
         <div className="mt-16 bg-blue-200 rounded-lg p-8 m-5">
           <h6 className="font-bold mb-2">This workshop is made for <a href="https://counterspell.hackclub.com/" target="_blank" rel="noopenner noreferrer" className="link">Counterspell</a>!</h6>
-          <h6>Submit your Gamemaker game to Counterspell! Top two global games get GameMaker Pro Licenses - more info soon!!</h6>
+          <h6>Submit your Gamemaker game to Counterspell and GX.Games! Top two global games get GameMaker Pro Licenses - more info soon!!</h6>
           <h6 className="mt-2"><a href="https://gamemaker.io/en/download" target="_blank" rel="noopenner noreferrer" className="link">Download Gamemaker here :3</a></h6>
         </div>
       </div>
