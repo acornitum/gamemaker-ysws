@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: antiquewhite;
 }
 
 code {
@@ -22,7 +23,7 @@ p {
 }
 
 .link {
-  color: #6175fb;
+  color: #4658d2;
   text-decoration: underline;
 }
 
