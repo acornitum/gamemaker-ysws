@@ -5,6 +5,7 @@ import './output.css';
 export default function App() {
   return (
     <div className="">
+      <a href="https://hackclub.com"><img src="https://assets.hackclub.com/flag-orpheus-top.svg" className="absolute"/></a>
 
       <div className="flex flex-col justify-center items-center h-screen text-center mx-5">
         <p className="text-6xl mb-2">Gamemaker Tutorial</p>
@@ -12,7 +13,7 @@ export default function App() {
 
         <div className="mt-16 bg-blue-200 rounded-lg p-8 m-5">
           <h6 className="font-bold mb-2">This workshop is made for <a href="https://counterspell.hackclub.com/" target="_blank" rel="noopenner noreferrer" className="link">Counterspell</a>!</h6>
-          <h6>Submit your Gamemaker game [HERE] at the end of event. Top two games get [THING]!!</h6>
+          <h6>Submit your Gamemaker game to Counterspell! Top two global games get GameMaker Pro Licenses - more info soon!!</h6>
           <h6 className="mt-2"><a href="https://gamemaker.io/en/download" target="_blank" rel="noopenner noreferrer" className="link">Download Gamemaker here :3</a></h6>
         </div>
       </div>
@@ -21,7 +22,7 @@ export default function App() {
 
         <div className="border-dashed border-pink-400 border-4 p-8">
           <p>a quick(?) preface:</p>
-          <p>3 days ago, Max (@msw) told me about a potential Gamemaker workshop we could run at Counterspell. Never having used Gamemaker before (but having tried out other game engines), I decided this would be a fun challenge to take on. </p>
+          <p>3 days ago, Max (@msw) told me (@acon) about a potential Gamemaker workshop we could run at Counterspell. Never having used Gamemaker before (but having tried out other game engines), I decided this would be a fun challenge to take on. </p>
           <p>After spending the past few days entirely in Gamemaker, I think that it’s fairly intuitive to learn. IMO, it’s way easier than Unity. I think movement + collision setup for any 2D platformer/top-down game will be easier in Godot? But Gamemaker is easy to catch on. The UI/UX is a little iffy to use on small screens but otherwise the layouts are easy to use.</p>
           <p className="font-bold">This workshop is meant for those who have never used Gamemaker before.</p>
           <p>Now, there are plenty of tutorials online on how to make specific games. I’ll be trying to teach the logic of how to use Gamemaker, as a basepoint, that you can build upon yourself, rather than make a complete game in this tutorial.</p>
@@ -65,7 +66,7 @@ export default function App() {
           <p>Like creating a sprite, right click anywhere, hover over <i>Assets</i>, then click on <i>Create Object</i>. <span className="thought">((Alternatively, Option+O also works.))</span></p>
           <img src="/pic8.png"/>
           <p>Now, rename the object! Following the previous naming convention, I’m going to call it <i>oPlayer</i>.</p>
-          <p>Next, we’ll need to add the sprite to the object. Click on <i>No sprite</i> and choose the sprite you just made for the player!</p>
+          <p>Next, we’ll need to add the sprite to the object. Click on <i>No Sprite</i> and choose the sprite you just made for the player!</p>
           <img src="/pic9.png"/>
           <p>Congrats! You just made an object that looks! </p>
         </div>
@@ -81,14 +82,25 @@ export default function App() {
           <img src="/pic12.png" />
           <p>When we run our game now, the player will show up!</p>
           <p>Next, we'll add tiles to the background.</p>
-          <p>FDSFS</p>
+          <p>First thing we'll do is create a tileset. We'll need a tile layer for that, so on the left Inspector, click on the tile icon; make sure to move the <i>Tiles_1</i> layer below the Instances layer! After that, to draw out the tileset, click on <i>Open Editor</i>, then <i>Create New</i>.</p>
+          <img src="/pic13.png"/>
+          <p>A new <i>TileSet1</i> asset will appear in right <i>Assets</i>; click onto it. Also, drag it into the <i>Tile Sets</i> folder if it's not already. Then, click on <i>No Sprite</i> to get into the tab to draw the tileset.</p>
+          <img src="/pic14.png"/>
+          <p>A new asset is going to appear on the right; I've renamed it to <i>Tiles</i>. Click into it to actually edit what it looks like, just like what we did with the player sprite.</p>
+          <img src="pic15.png"/>
+          <p>Here, I've just chosen to fill it with shades of green. <span className="thought">((look it's 3am rn i want to sleep fjdslfdksfds don't judge my low effortness))</span></p>
+          <img src="pic16.png"/>
+          <p>Go to the <i>Room Editor</i> tab on the right. Go back to the <i>Room_1</i> tab in the middle. Now, you can click on the tiles in <i>Room Editor</i> to draw in the space in <i>Room_1</i> with tiles!</p>
+          <img src="pic17.png"/>
+          <p>And now, if you run the game, a character with a background shows up!!</p>
+          <img src="pic18.png"/>
         </div>
 
-        <div>
-          <p className="text-3xl">adding player movement</p>
-          <p>There's a few ways to make an object move in Gamemaker.</p>
+        <div className="opacity-20">
+          <p className="text-3xl">adding player movement - work on progress (will finish in next 24 hours; it's just 3am rn and id like to sleep)</p>
+          <p>There's a few ways to make an object move in Gamemaker. This is the way I like doing it.</p>
           <p>Click into the object; two tabs should appear: one for object specifications, and the other for events.</p>
-          <p><i>Events</i> are the things that happen after something is triggered. When you click on <i>Add Event</i>, you get to choose from a list of “triggers”; for example, <i>Create</i> (code runs once when object first appears in game), <i>Step</i> (code runs at the fps the game is set to at all times), <i>Collision</i> (code runs when object touches another specified object).</p>
+          <p><i>Events</i> are the things that happen after a preset condition is triggered. When you click on <i>Add Event</i>, you get to choose from a list of “triggers”; for example, <i>Create</i> (code runs once when object first appears in game), <i>Step</i> (code runs at the fps the game is set to at all times), <i>Collision</i> (code runs when object touches another specified object).</p>
           <p>The first thing we’re going to do is make a <i>Create</i> event.</p>
         </div>
 

@@ -549,6 +549,10 @@ video {
   visibility: visible;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .m-10 {
   margin: 2.5rem;
 }
@@ -766,6 +770,14 @@ video {
 
 .opacity-90 {
   opacity: 0.9;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-20 {
+  opacity: 0.2;
 }
 
 @media (min-width: 768px) {
